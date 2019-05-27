@@ -19,6 +19,6 @@ if($var1>$var4){
 }
 
 
-/* video* aqui aprendimos ccomo se manejan los operadores*/
+/* video 9* aqui aprendimos ccomo se manejan los operadores*/
 
 ?>
