@@ -17,6 +17,18 @@
 		border: double;
 	}
 
+	.p{
+		color: green;
+		font-weight: bold;
+	}
+
+	.p1{
+		font-weight: bold;
+		color: red;
+		
+	}
+
+
 
 </style>
 <h1 class="h1"> ENTRADA DE USUARIO</h1>
@@ -58,13 +70,14 @@ $edad=34;
 if(isset($_POST['enviar'])){
 
 	$usuario=$_POST['Usuario'];
+	$edad=$_POST['Edad'];
 
 
 
-	if ($usuario=='jorge') {
-		echo "Bienvenido, puede entrar";
+	if ($usuario=='jorge' && $edad>18) {
+		echo "<p class='p'>Bienvenido, puede entrar</p>";
 	}else{
-		echo "No puede entar nombre incorrecto";
+		echo "<p class='p1'>No puede entar nombre incorrecto</p1>";
 }
 	
 }
