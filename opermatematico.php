@@ -1,7 +1,7 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>Calculo Matematico</p>
-<form name="formcalc" method="post" action="">
+<form name="formcalc" method="post" action="calculo.php">
 	<table>
 		<tr>
 		<td>
@@ -35,35 +35,6 @@
 	</table>
 	
 </form>
-<?php
 
-if(isset($_POST['enviar'])){
-	$num1=$_POST['num1'];
-	$num2=$_POST['num2'];
-	$oper=$_POST['oper'];
-
-	
-	if(!strcmp("Suma",$oper)){
-		echo "El resultado es: " . number_format($num1+$num2,2);
-	}
-
-	if(!strcmp("Resta",$oper)){
-		echo "El resultado es: " . number_format($num1-$num2,2);
-	}
-
-	if(!strcmp("Multiplicacion",$oper)){
-		echo "El resultado es: " . number_format($num1*$num2,2);
-	}
-
-	if(!strcmp("Division",$oper)){
-		echo "El resultado es: " . number_format($num1/$num2,2);
-	}
-
-	if(!strcmp("Modulo",$oper)){
-		echo "El resultado es: " . number_format($num1%$num2,2);
-	}
-}
-
-?>
 
 

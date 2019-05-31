@@ -15,7 +15,8 @@ if(isset($_POST['enviar'])){
 	$oper=$_POST['oper'];
 
 	if(!strcmp("Suma",$oper)){
-		echo "" . ($num1+$num2);
+		$resul=($num1+$num2);
+		echo "Resulda es $resul";
 	}
 }
 
