@@ -1,13 +1,12 @@
+<style type="text/css">
+	.resu{
+		color: red;
+		font-weight: bold;
+	}
+</style>
+
 <?php
 
-if(isset($_POST['enviar'])){
-	$num1=$_POST['num1'];
-	$num2=$_POST['num2'];
-	$oper=$_POST['oper'];
-
-calc($oper);
-
-}
 
 function calc($op)
 {
@@ -16,7 +15,7 @@ function calc($op)
 		global $num2;
 		
 		$resul=number_format($num1+$num2,2);
-		echo "El resultado es: $resul";  
+		echo "<p class='resu'>El resultado es: $resul</p>";  
 	}
 
 	if(!strcmp("Resta",$op)){
@@ -24,7 +23,7 @@ function calc($op)
 		global $num2;
 		
 		$resul=number_format($num1-$num2,2);
-		echo "El resultado es: $resul";
+		echo "<p class='resu'>El resultado es: $resul</p>";
 	}
 
 	if(!strcmp("Multiplicacion",$op)){
@@ -32,7 +31,7 @@ function calc($op)
 		global $num2;
 		
 		$resul=number_format($num1*$num2,2);
-		echo "El resultado es: $resul";
+		echo "<p class='resu'>El resultado es: $resul</p>";
 	}
 
 	if(!strcmp("Division",$op)){
@@ -40,7 +39,7 @@ function calc($op)
 		global $num2;
 		
 		$resul=number_format($num1/$num2,2);
-		echo "El resultado es: $resul";
+		echo "<p class='resu'>El resultado es: $resul</p>";
 	}
 
 	if(!strcmp("Modulo",$op)){
@@ -48,7 +47,26 @@ function calc($op)
 		global $num2;
 		
 		$resul=number_format($num1%$num2,2);
-		echo "El resultado es: $resul";
+		echo "<p class='resu'>El resultado es: $resul</p>";
+	}
+
+	if(!strcmp("Incremento",$op)){
+		global $num1;
+		
+		$num1++;
+		
+		$resul=number_format($num1,2);
+		echo "<p class='resu'>El resultado es: $resul</p>";
+	}
+
+	if(!strcmp("Descremento",$op)){
+		global $num1;
+		//global $num2;
+
+		$num1--;
+		
+		$resul=number_format($num1,2);
+		echo "<p class='resu'>El resultado es: $resul</p>";
 	}
 }
 

@@ -1,7 +1,7 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>Calculo Matematico</p>
-<form name="formcalc" method="post" action="calculo.php">
+<form name="formcalc" method="post" action="">
 	<table>
 		<tr>
 		<td>
@@ -24,6 +24,8 @@
 		<option>Multiplicacion</option>
 		<option>Division</option>
 		<option>Modulo</option>
+		<option>Incremento</option>
+		<option>Descremento</option>
 		</select>
 		</td>
 		</tr>
@@ -35,6 +37,21 @@
 	</table>
 	
 </form>
+
+<?php
+	include("calculo.php");
+
+	if(isset($_POST['enviar'])){
+	$num1=$_POST['num1'];
+	$num2=$_POST['num2'];
+	$oper=$_POST['oper'];
+
+calc($oper);
+
+}
+
+/* video13 */
+?>
 
 
 
