@@ -50,7 +50,7 @@ calc($oper);
 
 }
 
-/* video13 */
+/* video13 en este video hicimos opcion de selecion y incluimos archivo de externo*/ 
 ?>
 
 
