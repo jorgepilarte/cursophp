@@ -23,10 +23,10 @@
 	
 	<tr>
 		<td>
-			Edad
+			Contrasena
 		</td>
 		<td>
-			<input type="text" name="edad">
+			<input type="text" name="pass">
 		</td>
 		</tr>
 		<tr>
@@ -36,7 +36,7 @@
 	</tr>
 	<tr>
 		<td colspan="2" align="center">
-			<input type="submit" name="enviar">
+			<input type="submit" name="enviar" value="Entrar">
 		</td>
 	</tr>
 	</table>
