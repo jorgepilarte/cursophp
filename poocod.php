@@ -1,15 +1,21 @@
 <?php
 class Coche{
 
-	var $ruedas;
+	protected $ruedas;
 	var $color;
-	var $motor;
+	protected $motor;
 
 	function coche(){
 		$this->ruedas=4;
 		$this->color="";
 		$this->motor=1600;
 
+	}
+	function get_ruedas(){
+		return $this->ruedas;
+	}
+	function get_motor(){
+		return $this->$motor;
 	}
 	function arrancar(){
 		echo "ESTOY ARRANCANDO<br>";
@@ -28,7 +34,7 @@ class Coche{
 	}
 	function color($color,$nombre){
 		$this->color=$color;
-		echo "EL COLOR ES: $color" . "DEL" . $nombre . "<br>";
+		echo "EL COLOR ES: $color DEL $nombre" . "<br>";
 
 	}
 	
@@ -41,6 +47,18 @@ class Camion extends Coche{
 		$this->ruedas=16;
 		$this->color="";
 		$this->motor=3200;
+	}
+
+	function color($color,$nombre){
+		$this->color=$color;
+		echo "EL COLOR ES: $color DEL $nombre" . "<br>";
+
+	}
+	function arrancar(){
+		parent::arrancar();
+		echo "CAMION EN MARCHA<br>";
+
+
 	}
 }
 

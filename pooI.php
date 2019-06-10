@@ -7,12 +7,16 @@ $seat=new Coche();
 $mack=new Camion();
 
 $seat->girar();
+echo $mack->get_ruedas() . "<br>";
+echo $seat->get_ruedas() . "<br>";
+echo $seat->get_motor() . " CC" . " <br>";
 
-echo $seat->ruedas . "<br>";
+//$seat->color("red","seat");
 
-$seat->color("red","seat");
+//$mack->arrancar();
 
-$mack->girar();
+//$mack->color("BLANCO","MACK");
+//echo $mack->ruedas . "<br>";
 
 
 /*vedo21- */
