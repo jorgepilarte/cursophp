@@ -3,8 +3,14 @@ include ("dealer.php");
 
 $cliente=new Compra();
 
-$cliente->Compra("sport");
+Compra::descgov();
+$cliente->fact("standar");
+$cliente->add("leather");
+$cliente->add("aros");
 
 echo $cliente->precio();
+
+
+
 
 ?>
