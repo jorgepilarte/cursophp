@@ -35,7 +35,7 @@ for ($i=0; $i<count($sem) ; $i++) {
 echo "<br>";
 $empleados=array("Rosa","Maria","Aura","Juana");
 
-echo $empleados[rand(0,4)] . "<br>";
+echo $empleados[rand(0,3)] . "<br>";
 
 echo "<br>";
 
