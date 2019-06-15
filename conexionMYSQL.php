@@ -1,14 +1,13 @@
 <?php
 
-$conex=mysqli_connect("localhost","root","");
+$conex=mysqli_connect("localhost","root","","cursophp");
 
-if($conex){
-	echo "CONEXION EXISTOSA";
-}else{
-	echo"FALLO EN LA CONEXION";
-	die(print_r(sqlsrv_errors(),true));
+if(mysqli_connect_errno()){
+	echo "ERROR EN LA CONEXION";
+	exit();
 }
 
+mysqli_set_charset($conex,"utf8");
 
 
 ?>
