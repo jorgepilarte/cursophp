@@ -1,6 +1,6 @@
 <?php
 
-$conex=mysqli_connect("localhost","cursophp","root","");
+$conex=mysqli_connect("localhost","root","");
 
 if($conex){
 	echo "CONEXION EXISTOSA";
