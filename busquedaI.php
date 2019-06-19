@@ -1,10 +1,10 @@
 <?php
-function consulta(){
+function eje_consulta($busqueda){
 
-$busqueda=$_POST['busqueda'];
+//$busqueda=$_POST['buscar'];
 include 'conexionMYSQL.php';
 
-$consulta= "SELECT * FROM datospersonales WHERE NOMBRE='%busqueda'";
+$consulta= "SELECT * FROM datospersonales WHERE NOMBRE='$busqueda'";
 $resultados=mysqli_query($conex,$consulta);
 
 while($fila=mysqli_fetch_row($resultados)){
@@ -26,12 +26,16 @@ mysqli_close($conex);
 
 ?>
 <?php
-if(isset($_POST['buscar']=true)){
+$mipag=$_SERVER["PHP_SELF"];
+$misbus=$_GET["buscar"];
 
-	consulta();
+//if(isset($misbus)){
+if($misbus!=null){
+
+	eje_consulta($misbus);
 }else{
-	echo("<form method='POST'><label>Buscar<input type='text' name='buscar'></label><input type='submit' name='enviar' value='Buscar'</form>");
-}
+	echo ("<form action='" . $mipag . "' method='get'><label>Buscar<input type='text' name='buscar'></label><input type='submit' name='enviar' value='Buscar'</form>");
 
+}
 
 ?>
