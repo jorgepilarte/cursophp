@@ -6,7 +6,7 @@ $pais=$_GET['pais'];
 $precio=$_GET['precio'];
 include 'conexionMYSQL.php';
 
-$insertar= "INSERT INTO `artículos`(`SECCIÓN`, `NOMBRE ARTÍCULO`, `FECHA`, `PAÍS DE ORIGEN`, `PRECIO`) VALUES ('$seccion','$articulo','$fecha','$pais','$precio')";
+$insertar= "UPDATE `artículos` SET `SECCIÓN`='$seccion', `NOMBRE ARTÍCULO`='$articulo', `FECHA`='$fecha', `PAÍS DE ORIGEN`='$pais', `PRECIO`='$precio'where SECCIÓN='$seccion'";
 $resultados=mysqli_query($conex,$insertar);
 if($resultados==false){
 	echo "ERROR AL INSERTAR ARTÍCULO"; 
