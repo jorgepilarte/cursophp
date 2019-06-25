@@ -29,6 +29,7 @@ mysqli_close($conex);
 $mipag=$_SERVER["PHP_SELF"];
 $misbus=$_GET["buscar"];
 
+
 //if(isset($misbus)){
 if($misbus!=null){
 

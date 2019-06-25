@@ -3,6 +3,7 @@ $busqueda=$_GET['busqueda'];
 include 'conexionMYSQL.php';
 
 $consulta= "SELECT * FROM datospersonales WHERE NOMBRE='$busqueda'";
+//$consulta= "SELECT * FROM datospersonales WHERE NOMBRE like'%$busqueda%'"; para buscar en lista con solo poner palabra que coincidan.
 $resultados=mysqli_query($conex,$consulta);
 
 while($fila=mysqli_fetch_row($resultados)){
