@@ -6,12 +6,10 @@ $pais=$_GET['pais'];
 $precio=$_GET['precio'];
 include 'conexionMYSQL.php';
 
-//$insertar= "UPDATE artículos SET SECCIÓN='$seccion', NOMBRE ARTÍCULO='$articulo', FECHA='$fecha', PAÍS DE ORIGEN='$pais', PRECIO=$precio where SECCIÓN='$seccion'";
 
-
-//$inser="UPDATE `artículos` SET `SECCIÓN`=$seccion,`NOMBRE ARTÍCULO`=$articulo,`FECHA`=$fecha,`PAÍS DE ORIGEN`=$pais,`PRECIO`=$precio WHERE SECCIÓN='$seccion' ";
 
 $inser="UPDATE `artículos` SET `SECCIÓN`='$seccion',`NOMBRE ARTÍCULO`='$articulo',`FECHA`='$fecha',`PAÍS DE ORIGEN`='$pais',`PRECIO`=$precio WHERE `SECCIÓN`='$seccion'";
+
 $resultados=mysqli_query($conex,$inser);
 if($resultados==false){
 	echo "ERROR AL ACTUALIZAR ARTÍCULO"; 

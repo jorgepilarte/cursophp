@@ -2,10 +2,10 @@
 
 include 'conexionMYSQL.php';
 
-$user=mysqli_escape_string($conex, $_GET['user']);
+$user=mysqli_escape_string($conex, $_GET['user']); // PARA QUE NO LE INYECTEN SQL
 $pass=mysqli_escape_string($conex, $_GET['pass']);
 
-$dele= "DELETE FROM USUARIOS WHERE USER='$user' AND PASS=$pass";
+$dele= "DELETE FROM USUARIOS WHERE USER='$user' AND PASS='$pass'";
 //$sele="SELECT *FROM USUARIOS";
 
 if(mysqli_query($conex,$dele)){

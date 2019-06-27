@@ -6,7 +6,7 @@ echo "<br>";
 $busqueda=$_GET['busqueda'];
 include 'conexionMYSQL.php';
 
-$consulta= "SELECT * FROM artículos WHERE SECCIÓN='$busqueda'";
+$consulta= "SELECT * FROM artículos WHERE SECCIÓN='$busqueda'"; // eje: deporte' or '1'='1 para inyectar informacion
 $resultados=mysqli_query($conex,$consulta);
 
 while($fila=mysqli_fetch_array($resultados)){
