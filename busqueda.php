@@ -15,7 +15,7 @@ if($cons==false){
 	echo "error en la consulta";
 }else{
 	echo "informacion<br>";
-	$cons=mysqli_stmt_bind_result($resul, $v1, $v2, $v3, $v4);
+	$cons=mysqli_stmt_bind_result($resul, $v1, $v2, $v3, $v4, $v5);
 
 	while(mysqli_stmt_fetch($resul)){
 
