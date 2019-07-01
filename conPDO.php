@@ -10,6 +10,8 @@ try{
 
 	die("Error: " . $e->GetMessage());
 
+	echo $conexion->Getline();
+
 }finally{
 
 	$base=null;
