@@ -24,6 +24,7 @@
 
 	<input onkeyup="this.form.text5.value = parseInt(this.value)*25" name="text" type="text" size="4" maxlength="8"><label>RD$25</label><input type="text" name="text5" size="10" maxlength="10" id="5" onkeyup="obtenerSuma();" readonly="" value=""><br>
 
+<<<<<<< HEAD
 	<input onkeyup="this.form.text4.value = parseInt(this.value)*10" name="text" type="text" size="4" maxlength="8"><label>RD$10</label><input type="text" name="text4" size="10" maxlength="10" id="4" onkeyup="obtenerSuma();" readonly="" value=""><br>
 
 	<input onkeyup="this.form.text3.value = parseInt(this.value)*5" name="text" type="text" size="4" maxlength="8"><label>RD$5</label><input type="text" name="text3" size="10" maxlength="10" id="3" onkeyup="obtenerSuma();" readonly=""><br>
@@ -35,8 +36,27 @@
 	<label>Total</label> <input type="text" name="" id="resultado" readonly="" value="">
 
 	
+=======
+	<input onkeyup="this.form.text3.value = parseInt(this.value)*5" name="text" type="text" size="4" maxlength="8"><label>RD$5</label><input type="text" name="text3" size="10" maxlength="10" id="3" onkeyup="obtenerSuma();"><br>
+
+	<input onkeyup="this.form.text2.value = parseInt(this.value)*1" name="text" type="text" size="4" maxlength="8"><label>RD$1</label><input type="text" name="text2" size="10" maxlength="10" id="2" onkeyup="obtenerSuma();"><br>
+
+	<input onkeyup="this.form.text1.value = parseInt(this.value)*50" name="text" type="text" size="4" maxlength="8"><label>US$50</label><input type="text" name="text1" size="10" maxlength="10" id="1" onkeyup="obtenerSuma();"><br><br>
+
+	<label>Total</label> <input type="text" name="" id="resultado" readonly="">
+
+	 
 
 </form>
+<script>
+            function obtenerSuma()
+            {
+                document.getElementById('resultado').value=parseFloat(document.getElementById('1').value)+parseFloat(document.getElementById('2').value)+parseFloat(document.getElementById('3').value)+parseFloat(document.getElementById('4').value)+parseFloat(document.getElementById('5').value)+parseFloat(document.getElementById('6').value)+parseFloat(document.getElementById('7').value)+parseFloat(document.getElementById('8').value)+parseFloat(document.getElementById('9').value)+parseFloat(document.getElementById('10').value)+parseFloat(document.getElementById('11').value);
+            }
+        </script> 
+>>>>>>> 041def68f11b0873206749054029c7b9a514bd5d
+
+
 
 
 <?php 
