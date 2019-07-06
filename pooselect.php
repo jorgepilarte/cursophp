@@ -10,7 +10,7 @@ class DevProductos extends Conexion{
 
 	public function get_productos(){
 
-		$resul=$this->conexiondb->query(SELECT * FROM usuarios);
+		$resul=$this->conexiondb->query("SELECT * FROM usuarios");
 
 		$user=$resul->fetch_all(MYSQLI_ASSOC);
 

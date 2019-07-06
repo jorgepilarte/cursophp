@@ -15,7 +15,7 @@ foreach($array as $user){
 	echo $user['user'] . " ";
 	echo $user['pass'] . " ";
 	echo $user['direcion'] . " ";
-	echo $user['telefono'] . " ";
+	echo $user['telefono'] . " <br>";
 }
 
 
