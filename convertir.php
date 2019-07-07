@@ -1,5 +1,5 @@
 <form>
-	<label>Suma <input type="text" name="cantodad"></label>
+	<label>Suma <input type="text" name="cantidad"></label>
 
 </form>
 <?php 

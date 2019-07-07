@@ -6,7 +6,7 @@ class Conexion{
 	protected $conexiondb;
 
 
-	public function Conexion(){
+	public function conexion(){
 
 		$this->conexiondb=new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 

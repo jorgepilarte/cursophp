@@ -1,9 +1,9 @@
 <?php 
 include 'pooconexion.php';
 
-class DevProductos extends Conexion{
+class DevProductos extends conexion{
 
-	public function devproductos(){
+	public function DevProductos(){
 
 		parent::__construct();
 	}
@@ -16,6 +16,8 @@ class DevProductos extends Conexion{
 
 		return $user;
 	}
+
+
 }
 
 
