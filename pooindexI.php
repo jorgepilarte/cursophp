@@ -14,11 +14,11 @@ $array=$producto->get_productos();
 <?php 
 foreach($array as $user){
 
-	echo $user['nombre'] . " ";
+	echo $user['id'] . " ";
 	echo $user['user'] . " ";
 	echo $user['pass'] . " ";
 	
-	echo $user['fecha'] . " <br>";
+	echo $user['date'] . " <br>";
 }
 
 
