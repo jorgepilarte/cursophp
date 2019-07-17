@@ -1,5 +1,6 @@
 <?php
 
+$aute=false;
 
 if(isset($_POST['enviar'])){
 
@@ -16,15 +17,16 @@ $rep=$conexion->prepare($sql);
 
 		$rep->execute();
 
-		
 		$nfila=$rep->rowCount();
 
 		if($nfila!=0){
 
-			session_start();
-			$_SECCION['user']=$_POST['user'];
-			
-			
+			$aute=true;
+
+			if(isset($_POST['recordar'])){
+
+				setcookie('user', $_POST['user'], time()+86400);
+			}
 
 			//header("location:poomenu.php");
 			
@@ -40,12 +42,20 @@ $rep=$conexion->prepare($sql);
 ?>
 
 <?php
-if(!isset($_SECCION['user'])){
+if($aute==false){
+	if(isset($_COOKIE['user'])){
 
-	include 'loginII.php';
-}else{
-	echo "User " . $_SECCION['user'];
+		include 'form_cookie_loginII.php';
+	}
+
 }
+
+if($aute==true || !isset($_COOKIE['user'])){
+	
+		
+		echo "<a align='right' valign='up' href='poocerraruse.php'<p style='font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 12px;color: #CC6600;'> User " . $_COOKIE['user'] . "</p></a>";
+	}
+
 
 ?>
 
@@ -56,3 +66,13 @@ if(!isset($_SECCION['user'])){
 <a href="poomenuII.php"><h3> Sub-Menu</a></h3><br>
 
 <a href="poomenuIII.php"><h3> Sub-Menu</a></h3><br>
+
+<?php
+if($aute==true || !isset($_COOKIE['user'])){
+	
+		include 'contcookieloginII.php';
+	}
+
+
+
+?>

@@ -17,6 +17,8 @@ $rep=$conexion->prepare($sql);
 
 		if($nfila!=0){
 
+			$aute=true
+
 			session_start();
 			$_SESSION['user']=$_POST['user'];
 

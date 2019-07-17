@@ -3,8 +3,7 @@
 
 <form name="form" method="post" action="">
 
-  <input type="text" name="<?php $cant=0;?> id="1"><input type="text" name="<?php $cant=+1?>;"><br>
-
+  
 	<script>
             function obtenerSuma()
             {
