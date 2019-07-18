@@ -28,7 +28,7 @@ $reg=$resul->fetchAll(PDO::FETCH_OBJ);
 <?php foreach ($reg as $value):?>
 
 <tr align="center">
-	<td><a href="actualizareliminar.php?id=<?php echo $value->id ?>"><?php echo $value->user ?></a></td>
+	<td><a href="actualizareliminar.php?id=<?php echo $value->id ?> & user=<?php echo $value->user ?> & venta=<?php echo $value->venta ?> & premio=<?php echo $value->premio ?> & recarga=<?php echo $value->recarga ?>"><?php echo $value->user ?></a></td>
 	<td><?php echo $value->venta ?></td>
 	<td><?php echo $value->premio?></td>
 	<td><?php echo $value->recarga?></td>
