@@ -6,52 +6,51 @@ $user=$_GET['user'];
 $venta=$_GET['venta'];
 $premio=$_GET['premio'];
 $recarga=$_GET['recarga'];
+$fecha=$_GET['fecha'];
 }else{
 $id=$_POST['id'];
 $user=$_POST['user'];
 $venta=$_POST['venta'];
 $premio=$_POST['premio'];
 $recarga=$_POST['recarga'];
+$fecha=$_POST['fecha'];
 
-}
 
 include 'conPDO.php';
 
-$sql="UPDATE VENTALOT SET USER=:user, VENTA=:venta, PREMIO=:premio, RECARGA=:recarga WHERE ID=:id";
+$sql="UPDATE VENTALOT SET USER=:user, VENTA=:venta, PREMIO=:premio, RECARGA=:recarga, FECHA=:fecha WHERE ID=:id";
 
 $resul=$conexion->prepare($sql);
 
-$resul->execute(array(":id"=>$id, ":user"=>$user, "venta"=>$venta, ":premio"=>$premio, ":recarga"=>$recarga));
+$resul->execute(array(":id"=>$id, ":user"=>$user, "venta"=>$venta, ":premio"=>$premio, ":recarga"=>$recarga, ":fecha"=>$fecha));
 
-//header("location:crup.php");
 
-//echo $id . $user . $venta . $premio . $recarga;
+header("location:crup.php");
 
-//include 'conPDO.php';
-
-//$reg=$conexion->query("SELECT * FROM VENTALOT WHERE ID='$id'")->fetchAll(PDO::FETCH_OBJ);
+}
  ?>
 
- <?php //foreach ($reg as $value):?>
+
 <form name="forms" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 <table border="line">
 
 	
  <tr>
-	
- 	<td><input type="hidden" name="" id="" onkeyup="saltar(event,'t2')" value="<?php echo $id?>"></td>
-	<td><input type="text" name="" id="t1" onkeyup="saltar(event,'t2')" value="<?php echo $user?>"></td>
-	<td><input type="text" name="" id="t2" onkeyup="saltar(event,'t3')" value="<?php echo $venta?>"></td>
-	<td><input type="text" name="" id="t3" onkeyup="saltar(event,'t4')" value="<?php echo $premio?>"></td>
-	<td><input type="text" name="" id="t4" onkeyup="saltar(event,'submit')" value="<?php echo $recarga?>"></td>
+
+	<td><input type="hidden" name="id" id="t0" onkeyup="saltar(event,'t1')" value="<?php echo $id; ?>"></td>
+ 	<td><input type="text" name="user" id="t1" onkeyup="saltar(event,'t2')" value="<?php echo $user; ?>"></td>
+	<td><input type="text" name="venta" id="t2" onkeyup="saltar(event,'t3')" value="<?php echo $venta; ?>"></td>
+	<td><input type="text" name="premio" id="t3" onkeyup="saltar(event,'t4')" value="<?php echo $premio; ?>"></td>
+	<td><input type="text" name="recarga" id="t4" onkeyup="saltar(event,'t5')" value="<?php echo $recarga; ?>"></td>
+	<td><input type="text" name="fecha" id="t5" onkeyup="saltar(event,'submit')" value="<?php echo $fecha; ?>"></td>
 	
 </tr>
-<?php //endforeach ?>
+
 
 <tr>
-	<td><a href="#"><input type="submit" name="actualizar" id="submit" value="Actualizar"></a></td>
+	<td><input type="submit" name="actualizar" id="submit" value="Actualizar"></td>
 
-	<td><a href="eliminaractualizarcrup.php?id=<?php echo $value->id ?>>"><input type="submit" name="" id="submit" value="Eliminar"></a></td>
+	<td><a href="eliminaractualizarcrup.php?id=<?php echo $id ?>>"><input type="button" name="" id="submit" value="Eliminar"></a></td>
 </tr>
 </table>
 </form>
