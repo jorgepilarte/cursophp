@@ -2,8 +2,18 @@
 include 'conPDO.php';
 
 $tmpginas=2;
-$pgnas=1;
-$emppginas=($pgnas-1)*$tmpginas;
+
+if(isset($_GET['pginas'])){
+if($_GET['pginas']==1){
+	header('location:crup.php');
+}else{
+	$pginas=$_GET['pginas'];
+}
+}else{
+$pginas=1;
+}
+
+$emppginas=($pginas-1)*$tmpginas;
 
 $sql="SELECT * FROM VENTALOT ORDER BY USER";
 $resul=$conexion->query($sql);
@@ -35,6 +45,8 @@ $resul=$conexion->query($sql);
 $reg=$resul->fetchAll(PDO::FETCH_OBJ);
 
 ?>
+
+
 
 <h2 align="center">ENTRA DE REGISTRO</h2>
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
@@ -69,12 +81,13 @@ $reg=$resul->fetchAll(PDO::FETCH_OBJ);
 </table>
 </form>
 
-<a href="?pgnas=<?php 
+<?php 
 	for ($pg=1; $pg <=$tpaginas ; $pg++) { 
+
+		echo "<a href='?pginas=$pg'>$pg</a> ";		
 		
-		echo " " . $pg . " ";
 	}
 
 
- ?>"></a>
+ ?>
 
