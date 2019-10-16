@@ -1,7 +1,3 @@
-<form>
-	<label>Suma <input type="text" name="cantidad"></label>
-
-</form>
 <?php 
 
 function unidad($numuero){ 
@@ -340,6 +336,6 @@ $numf = milmillon($num);
 return $numf." PESOS  CON ".$cents."/100"; 
 } 
 
-echo convertir(525); 
+echo convertir(); 
 
 ?> 

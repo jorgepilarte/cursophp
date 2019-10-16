@@ -20,6 +20,9 @@ class Conectar{
 
 	$base=null;
 }
+
+return $conexion;
 	}
 }
+
 ?>
